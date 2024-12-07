@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(153,217,234);
+        }
+        main{
+            margin:auto;
+        }
+        section{
+            text-align:center;
+        }
+    </style>
+    <script>
+        let i=0;
+        let plik="";
+        setInterval(function kwiatek(){
+            console.log("test");
+            i=i+1;
+            if(i>11){
+                i=11;
+            }
+            plik="kwiat"+i+".png";
+           document.querySelector("#kwiatek").innerHTML="<img src='"+plik+"'>";
+        },1000);
+        
+    </script>
+</head>
+<body onload="kwiatek()">
+    <main>
+        <section id="kwiatek">
+            <img src="kwiat0.png">
+        </section>
+    </main>
+</body>
+</html>
